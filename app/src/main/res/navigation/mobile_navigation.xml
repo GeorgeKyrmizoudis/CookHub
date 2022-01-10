@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_personal_data">
+
+    <fragment
+        android:id="@+id/nav_personal_data"
+        android:name="com.example.cookhub.burger_menu.ui.personal_data.PersonalDataFragment"
+        android:label="@string/menu_user"
+        tools:layout="@layout/fragment_personal_data" />
+
+    <fragment
+        android:id="@+id/nav_uploaded"
+        android:name="com.example.cookhub.burger_menu.ui.uploaded_recipes.UploadedRecipesFragment"
+        android:label="@string/menu_uploaded"
+        tools:layout="@layout/fragment_uploaded"/>
+
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.example.cookhub.burger_menu.ui.notifications.NotificationsFragment"
+        android:label="@string/menu_notifications"
+        tools:layout="@layout/fragment_notifications"/>
+
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.cookhub.burger_menu.ui.favorites.FavoritesFragment"
+        android:label="@string/menu_favorites"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/nav_invite_friends"
+        android:name="com.example.cookhub.burger_menu.ui.invite_friends.InviteFriendsFragment"
+        android:label="@string/menu_invite_friends"
+        tools:layout="@layout/fragment_invite_friends" />
+
+    <fragment
+        android:id="@+id/nav_rate"
+        android:name="com.example.cookhub.burger_menu.ui.rating.RatingFragment"
+        android:label="@string/menu_rate"
+        tools:layout="@layout/fragment_ratingbar"/>
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.cookhub.burger_menu.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/logout_fragment"/>
+
+</navigation>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Cookhub</string>
+    <string name="sign_in">Sign in</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="explain" translatable="false">Please enter your email address</string>
+    <string name="menu_user">User\'s personal data</string>
+    <string name="menu_uploaded">Uploaded recipes</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_favorites">Favorite recipes</string>
+    <string name="menu_logout">Sign out</string>
+    <string name="menu_invite_friends">Invite friends</string>
+    <string name="noticifaction_text">You have %d new notifications</string>
+    <string name="menu_rate">Rate Cookhub</string>
+    <string name="invite_message">Here you can share Cookhub with your friends! Invite them to Cookhub !</string>
+</resources>

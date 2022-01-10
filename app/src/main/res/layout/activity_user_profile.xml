@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_orange"
+    tools:context=".user_profile.UserProfileActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragmentGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/orange"
+        app:layout_constraintBottom_toTopOf="@id/fragmentGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/nav_header_desc"
+        app:layout_constraintBottom_toTopOf="@id/users_name"
+        app:layout_constraintEnd_toStartOf="@id/user_profile"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/user_profile"
+        android:layout_width="wrap_content"
+        android:padding="16dp"
+        android:layout_height="wrap_content"
+        android:text="User's Profile"
+        android:textColor="@color/light_orange"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/user_profile_email"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/users_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/users_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User's name"
+        android:textColor="@color/light_orange"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@id/user_profile_email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_image"
+        android:paddingLeft="8dp"/>
+
+    <TextView
+        android:id="@+id/user_profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_orange"
+        android:text="User's email address"
+        android:paddingLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/frameLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/users_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
