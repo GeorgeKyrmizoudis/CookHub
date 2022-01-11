@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cookhub">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cookhub">
+        <activity
+            android:name=".burger_menu.ui.personal_data.PersonalDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".burger_menu.ui.logout.SignOutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".burger_menu.ui.invite_friends.InviteFriendsActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".burger_menu.ui.rating.RatingActivity"
+            android:exported="true"/>
+
+
         <activity
             android:name=".user_profile.UserProfileActivity"
             android:exported="false" />
@@ -26,13 +50,7 @@
         <activity
             android:name=".ToSignInActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".SignedInActivity"
             android:exported="true" />

@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.cookhub.R;
-import com.example.cookhub.burger_menu.ui.favorites.FavoritesViewModel;
+
 
 public class RatingFragment extends Fragment {
 
@@ -27,9 +27,9 @@ public class RatingFragment extends Fragment {
                 new ViewModelProvider(this).get(RatingViewModel.class);
 
 
-        View root = inflater.inflate(R.layout.fragment_ratingbar, container, false);
+        View root = inflater.inflate(R.layout.rating_bar, container, false);
 
-        final TextView textView = root.findViewById(R.id.textView2);
+        final TextView textView = root.findViewById(R.id.ratingText);
         ratingViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

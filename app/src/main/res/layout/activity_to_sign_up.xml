@@ -142,6 +142,7 @@
         app:layout_constraintBottom_toTopOf="@id/signup_email"
         app:layout_constraintTop_toBottomOf="@id/signup_title">
 
+
       <EditText
             android:id="@+id/signup_username_value"
             android:layout_width="match_parent"
@@ -195,6 +196,7 @@
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="#c3cee9">
 
+
         <EditText
             android:id="@+id/signup_enter_password_value"
             android:layout_width="match_parent"
@@ -203,6 +205,7 @@
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_retype_password"
