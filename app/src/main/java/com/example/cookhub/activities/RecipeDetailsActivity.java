@@ -3,10 +3,14 @@ package com.example.cookhub.activities;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.example.cookhub.R;
 import com.example.cookhub.adapters.RecipeDetailsAdapter;
@@ -33,26 +37,30 @@ public class RecipeDetailsActivity extends BaseActivity {
                 onBackPressed();
             }
         });
-       /* ImageButton imageButton = findViewById(R.id.recipe_empty_like);
+        ToggleButton imageButton = findViewById(R.id.recipe_empty_like);
         //boolean disliked_liked = false;
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("APP","Liked recipe");
-                Toast.makeText(RecyclerActivity.this, "Recipe liked!!!", Toast.LENGTH_SHORT).show();
-              *//*  if (!disliked_liked) {
-                    disliked_liked=true;*//*
-                    imageButton.setImageResource(R.drawable.liked);
-                *//*} else {
-                    disliked_liked=false;
-                    imageButton.setImageResource(R.drawable.empty_like);
-                }*//*
-                //imageButton.setImageResource(R.drawable.liked);
-                //unlike when liked
+                Toast.makeText(RecipeDetailsActivity.this, "Recipe liked!!!", Toast.LENGTH_SHORT).show();
             }
-        });*/
-    }
+        });
+        ImageButton imagebtn = findViewById(R.id.recipe_share);
+        imagebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Please consider checking out Cookhub, our wonderful recipe app! Soon on PlayStore! https://www.youtube.com/c/GreekParanoia");
+                sendIntent.setType("text/plain");
+
+                Intent shareIntent = Intent.createChooser(sendIntent, null);
+                startActivity(shareIntent);
+            }
+        });
+    }
     @Override
     public void startOperations() {
 
