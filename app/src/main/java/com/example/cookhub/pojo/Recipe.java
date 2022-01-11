@@ -1,8 +1,12 @@
 package com.example.cookhub.pojo;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Recipe {
+public class Recipe implements Parcelable {
 
     public String uri;
     public String label;
@@ -32,6 +36,40 @@ public class Recipe {
 
     public Recipe() {
     }
+
+    protected Recipe(Parcel in) {
+        uri = in.readString();
+        label = in.readString();
+        image = in.readString();
+        source = in.readString();
+        url = in.readString();
+        shareAs = in.readString();
+        yield = in.readInt();
+        dietLabels = in.createStringArrayList();
+        healthLabels = in.createStringArrayList();
+        cautions = in.createStringArrayList();
+        ingredientLines = in.createStringArrayList();
+        calories = in.readFloat();
+        glycemicIndex = in.readInt();
+        totalCO2Emissions = in.readInt();
+        co2EmissionsClass = in.readString();
+        totalWeight = in.readFloat();
+        cuisineType = in.createStringArrayList();
+        mealType = in.createStringArrayList();
+        dishType = in.createStringArrayList();
+    }
+
+    public static final Creator<Recipe> CREATOR = new Creator<Recipe>() {
+        @Override
+        public Recipe createFromParcel(Parcel in) {
+            return new Recipe(in);
+        }
+
+        @Override
+        public Recipe[] newArray(int size) {
+            return new Recipe[size];
+        }
+    };
 
     public String getUri() {
         return uri;
@@ -223,6 +261,34 @@ public class Recipe {
 
     public void setDigest(ArrayList<Digest> digest) {
         this.digest = digest;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(uri);
+        dest.writeString(label);
+        dest.writeString(image);
+        dest.writeString(source);
+        dest.writeString(url);
+        dest.writeString(shareAs);
+        dest.writeInt(yield);
+        dest.writeStringList(dietLabels);
+        dest.writeStringList(healthLabels);
+        dest.writeStringList(cautions);
+        dest.writeStringList(ingredientLines);
+        dest.writeFloat(calories);
+        dest.writeInt(glycemicIndex);
+        dest.writeInt(totalCO2Emissions);
+        dest.writeString(co2EmissionsClass);
+        dest.writeFloat(totalWeight);
+        dest.writeStringList(cuisineType);
+        dest.writeStringList(mealType);
+        dest.writeStringList(dishType);
     }
 }
 

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".recycler_view.RecyclerActivity">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05"/>
+
+        <ImageView
+            android:id="@+id/recipe_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toTopOf="@id/guideline_up"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:clickable="true"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/recipe_img"
+            android:layout_width="350dp"
+            android:layout_height="240dp"
+            app:layout_constraintBottom_toTopOf="@+id/recipe_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_up"
+            app:roundPercent="0.5" />
+
+        <TextView
+            android:id="@+id/recipe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/recipe_empty_like"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recipe_img"
+            app:layout_constraintBottom_toTopOf="@id/recipe_ingr"
+            android:text="Filet Mignon"
+            android:textStyle="bold"
+            android:textColor="@color/dark_orange"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            android:textSize="25sp"/>
+
+        <ToggleButton
+            android:id="@+id/recipe_empty_like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/like_btn_action"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintBottom_toTopOf="@id/guideline_middle"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/recipe_name"
+            app:layout_constraintRight_toLeftOf="@id/recipe_share"
+            app:layout_constraintTop_toBottomOf="@id/recipe_img"/>
+
+        <ImageButton
+            android:id="@+id/recipe_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cardview_light_background"
+            app:layout_constraintTop_toBottomOf="@id/recipe_img"
+            app:layout_constraintBottom_toTopOf="@id/guideline_middle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/recipe_empty_like"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:src="@drawable/share"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.36"/>
+
+        <TextView
+            android:id="@+id/recipe_ingr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:background="@drawable/box"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_name"
+            app:layout_constraintBottom_toTopOf="@+id/recipe_ingredients_list"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/recipe_nutrition_info"
+            android:text="@string/ingredients"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recipe_ingredients_list"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/recipe_instr"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/recipe_nutrition_info"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_ingr" />
+
+        <TextView
+            android:id="@+id/recipe_nutrition_info"
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:background="@drawable/box"
+            android:padding="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_empty_like"
+            app:layout_constraintBottom_toTopOf="@id/recipe_instr"
+            app:layout_constraintLeft_toRightOf="@id/recipe_ingredients_list"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Nutrition(per serving):\n 543 calories, 30 g protein, .3 g carbohydrates, 46 g fat, 412 mg sodium"/>
+
+        <TextView
+            android:id="@+id/recipe_instr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:padding="10dp"
+            android:text="@string/recipe"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/recipe_instructions"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_ingredients_list" />
+
+        <TextView
+            android:id="@+id/recipe_instructions"
+            android:layout_width="360dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:text="Preheat oven to 400°. In a large skillet over medium-high heat, heat oil. Season steak with salt and pepper on both sides. When oil is just about to smoke, add steak. Cook until very seared, about 5 minutes, then flip and add butter and rosemary. Baste with butter and cook another 3 to 5 minutes.\n
+    Transfer skillet to oven and cook until cooked to your liking, about 5 minutes for medium.\n Pro tip: Check the temperature of your meat before transferring to the oven to see how far you are from the desired temperature. If you are within 10 degrees, you may need even less time. If your steak isn't done after 5 minutes, check every couple of minutes so you don't risk over cooking.
+Remove from pan and let rest 5 minutes before slicing."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_instr" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

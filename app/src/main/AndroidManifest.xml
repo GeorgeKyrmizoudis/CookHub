@@ -21,6 +21,8 @@
         <activity
             android:name=".activities.RecipeCategoryActivity"
             android:exported="true"/>
+        <activity android:name=".activities.RecipeDetailsActivity"
+            android:exported="true"/>
         <activity
             android:name=".activities.MainActivity"
             android:exported="true"/>

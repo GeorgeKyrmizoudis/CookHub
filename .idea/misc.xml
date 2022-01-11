@@ -3,16 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/layout/activity_main_layout.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/layout/activity_recipe_category.xml" value="0.21875" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/layout/content_main_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/layout/holder_item_category.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/layout/holder_item_recipe.xml" value="0.21875" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/layout/sign_in.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AD/Desktop/CookHub-develop/app/src/main/res/menu/main_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/drawable/circle.xml" value="0.2203125" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/drawable/food_ratingbar_full_empty.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/drawable/food_ratingbar_full_filled.xml" value="0.21614583333333334" />
@@ -25,9 +15,12 @@
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/drawable/ratingbar_empty.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/drawable/ratingbar_filled.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_forgot_password.xml" value="0.22" />
+        <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_invite_friends.xml" value="0.2" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_main_menu.xml" value="0.33" />
-        <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_to_sign_up.xml" value="0.33" />
+        <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_rating.xml" value="0.2" />
+        <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_sign_out.xml" value="0.2" />
+        <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_to_sign_up.xml" value="0.22" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/activity_user_profile.xml" value="0.33" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/app_bar_main_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/circle.xml" value="0.20416666666666666" />
@@ -43,19 +36,30 @@
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/fragment_slideshow.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/fragment_uploaded.xml" value="0.2" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/invite_friends_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/layout_search.xml" value="0.33" />
+        <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/like.xml" value="0.25" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/logout_fragment.xml" value="0.2" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/nav_header_main_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/rating.xml" value="0.2" />
+        <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/rating_bar.xml" value="0.2" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/rating_fragment.xml" value="0.2" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/ratingbar.xml" value="0.25" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/sign_in.xml" value="0.22" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/layout/sign_up.xml" value="0.22" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
         <entry key="..\:/Users/geoky/AndroidStudioProjects/Cookhub/app/src/main/res/menu/main_menu.xml" value="0.2" />
+        <entry key="..\:/Users/vlaxos-pc/AndroidStudioProjects/CookHub/app/src/main/res/drawable/arrow_back.xml" value="0.2111111111111111" />
+        <entry key="..\:/Users/vlaxos-pc/AndroidStudioProjects/CookHub/app/src/main/res/drawable/box.xml" value="0.2111111111111111" />
+        <entry key="..\:/Users/vlaxos-pc/AndroidStudioProjects/CookHub/app/src/main/res/drawable/empty_like.xml" value="0.2111111111111111" />
+        <entry key="..\:/Users/vlaxos-pc/AndroidStudioProjects/CookHub/app/src/main/res/drawable/like_btn_action.xml" value="0.2111111111111111" />
+        <entry key="..\:/Users/vlaxos-pc/AndroidStudioProjects/CookHub/app/src/main/res/drawable/liked.xml" value="0.2111111111111111" />
+        <entry key="..\:/Users/vlaxos-pc/AndroidStudioProjects/CookHub/app/src/main/res/drawable/share.xml" value="0.2111111111111111" />
+        <entry key="..\:/Users/vlaxos-pc/AndroidStudioProjects/CookHub/app/src/main/res/layout/holder_ingredients.xml" value="0.2609375" />
+        <entry key="..\:/Users/vlaxos-pc/AndroidStudioProjects/CookHub/app/src/main/res/layout/recipe_details.xml" value="0.13333333333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

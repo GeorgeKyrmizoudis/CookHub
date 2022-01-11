@@ -22,4 +22,7 @@
     <string name="bottom_nav_search">Search</string>
     <string name="bottom_nav_favorite">Favorites</string>
     <string name="bottom_nav_profile">Profile</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="recipe">Recipe</string>
+    <string name="nutr_info">Nutrition Info</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.example.cookhub.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ import com.example.cookhub.pojo.JsonResponse;
 import com.example.cookhub.pojo.Recipe;
 import com.google.gson.Gson;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class RecipeCategoryActivity extends AppCompatActivity {
@@ -65,7 +68,9 @@ public class RecipeCategoryActivity extends AppCompatActivity {
                 recyclerView.setAdapter(new RecipeCategoryAdapter(getRecipesList(), RecipeCategoryActivity.this, new RecipeCategoryAdapter.OnItemClickListener() {
                     @Override
                     public void onClick(View v, Recipe data) {
-
+                        Intent intent = new Intent(RecipeCategoryActivity.this, RecipeDetailsActivity.class);
+                        intent.putExtra("recipe", data);
+                        startActivity(intent);
                     }
                 }));
             }
