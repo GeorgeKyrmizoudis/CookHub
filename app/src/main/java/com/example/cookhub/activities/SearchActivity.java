@@ -10,6 +10,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cookhub.R;
+import com.example.cookhub.adapters.CuisineAdapter;
 import com.example.cookhub.models.MainMenuItem;
 
 import java.util.ArrayList;
