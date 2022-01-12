@@ -75,10 +75,10 @@ public class RecipeCategoryActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);*/
                         return true;
                     case R.id.profile_impl:
-                        /*finish();
+                        finish();
                         startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0,0);
-                        return true;*/
+                        return true;
                 }
                 return false;
             }

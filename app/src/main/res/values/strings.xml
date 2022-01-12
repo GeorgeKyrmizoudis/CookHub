@@ -28,4 +28,9 @@
     <string name="meal_type">Meal Type</string>
     <string name="search">Search</string>
     <string name="cuisines">Cuisines</string>
+    <string name="invite_friends">Invite friends</string>
+    <string name="user_profile">User Profile</string>
+    <string name="rating">Rating</string>
+    <string name="logout">Log out</string>
+    <string name="personal_info">Personal Info</string>
 </resources>
