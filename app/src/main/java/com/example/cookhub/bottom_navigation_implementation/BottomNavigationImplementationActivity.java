@@ -20,16 +20,16 @@ public class BottomNavigationImplementationActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main_layout);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_impl);
 
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.home_impl);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.home_impl:
-                    return true;
+                        return true;
                     case R.id.search_impl:
                         finish();
                         startActivity(new Intent(getApplicationContext(), SearchActivity.class));
@@ -39,9 +39,10 @@ public class BottomNavigationImplementationActivity extends AppCompatActivity {
                         finish();
                         startActivity(new Intent(getApplicationContext(), FavoritesActivity.class));
                         overridePendingTransition(0,0);
+                        return true;
                     case R.id.profile_impl:
                         finish();
-                        startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".bottom_navigation_test.AboutActivity">
 
-
-
         <TextView
             android:id="@+id/bottom_navig_text"
             android:layout_width="wrap_content"

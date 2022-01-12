@@ -28,7 +28,7 @@ public class PersonalDataFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_personal_data, container, false);
 
-        final TextView textView = root.findViewById(R.id.text_personal_data);
+        final TextView textView = root.findViewById(R.id.bottom_navig_profile);
         personalDataViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

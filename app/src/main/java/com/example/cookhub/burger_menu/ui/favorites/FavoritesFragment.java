@@ -29,7 +29,7 @@ public class FavoritesFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_favorite, container, false);
 
-        final TextView textView = root.findViewById(R.id.favorite_recipes);
+        final TextView textView = root.findViewById(R.id.bottom_navig_fav_rec);
         favoritesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
