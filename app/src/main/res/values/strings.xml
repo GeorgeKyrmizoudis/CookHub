@@ -25,4 +25,7 @@
     <string name="ingredients">Ingredients</string>
     <string name="recipe">Recipe</string>
     <string name="nutr_info">Nutrition Info</string>
+    <string name="meal_type">Meal Type</string>
+    <string name="search">Search</string>
+    <string name="cuisines">Cuisines</string>
 </resources>
