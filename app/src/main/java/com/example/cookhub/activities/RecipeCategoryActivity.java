@@ -3,10 +3,12 @@ package com.example.cookhub.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +24,7 @@ import com.example.cookhub.adapters.RecipeCategoryAdapter;
 import com.example.cookhub.pojo.Hit;
 import com.example.cookhub.pojo.JsonResponse;
 import com.example.cookhub.pojo.Recipe;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 
 import java.io.Serializable;
@@ -50,6 +53,36 @@ public class RecipeCategoryActivity extends AppCompatActivity {
         activityTitle.setText(category);
         ImageView backBtn = findViewById(R.id.back_button);
         RecyclerView recyclerView = findViewById(R.id.recycler_view_recipes_category);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.home_impl);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.home_impl:
+                        return true;
+                    case R.id.search_impl:
+                        finish();
+                        startActivity(new Intent(getApplicationContext(), SearchActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.favorites_impl:
+                        /*finish();
+                        startActivity(new Intent(getApplicationContext(), FavoritesActivity.class));
+                        overridePendingTransition(0,0);*/
+                        return true;
+                    case R.id.profile_impl:
+                        /*finish();
+                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;*/
+                }
+                return false;
+            }
+        });
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

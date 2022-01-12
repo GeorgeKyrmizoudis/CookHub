@@ -60,19 +60,18 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.favorites_impl:
-                        finish();
+                        /*finish();
                         startActivity(new Intent(getApplicationContext(), FavoritesActivity.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0,0);*/
                         return true;
                     case R.id.profile_impl:
-                        finish();
+                        /*finish();
                         startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0,0);
-                        return true;
+                        return true;*/
                 }
                 return false;
             }
-            //TODO: copy-paste the previous code to other activities!!!!//
         });
     }
 
