@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cookhub">
+
         <activity
             android:name=".user_profile.UserProfileActivity"
             android:exported="false" />
@@ -20,12 +21,13 @@
             android:exported="true" />
         <activity
             android:name=".activities.RecipeCategoryActivity"
-            android:exported="true"/>
-        <activity android:name=".activities.RecipeDetailsActivity"
-            android:exported="true"/>
+            android:exported="true" />
+        <activity
+            android:name=".activities.RecipeDetailsActivity"
+            android:exported="true" />
         <activity
             android:name=".activities.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".burger_menu.MainMenuActivity"
             android:exported="true"
@@ -34,7 +36,10 @@
         <activity
             android:name=".activities.ToSignInActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"/>
+            <activity
+                android:name=".activities.SearchActivity"
+                android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

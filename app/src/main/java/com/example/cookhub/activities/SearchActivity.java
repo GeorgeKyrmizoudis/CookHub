@@ -1,42 +1,45 @@
 package com.example.cookhub.activities;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.view.View;
+
 import com.example.cookhub.R;
-import com.example.cookhub.adapters.MainMenuAdapter;
+import com.example.cookhub.adapters.CuisineAdapter;
 import com.example.cookhub.models.MainMenuItem;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main_constraint);
-        setContentView(R.layout.activity_main_layout);
+        setContentView(R.layout.activity_search);
 
     }
 
     @Override
     public void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        RecyclerView recyclerView = findViewById(R.id.recycler_view_recipes);
-        recyclerView.setAdapter(new MainMenuAdapter(getDataList(), this, new MainMenuAdapter.OnItemClickListener() {
+
+        RecyclerView cuisineRecycler = findViewById(R.id.recycler_view_cuisines);
+        cuisineRecycler.setAdapter(new CuisineAdapter(getDataList(), this, new CuisineAdapter.OnItemClickListener() {
             @Override
             public void onClick(View v, MainMenuItem data) {
-                /*Snackbar.make(v, "Go to new Fragment and call the API with param: " + data.getItemName(), Snackbar.LENGTH_SHORT).show();*/
 
+            }
+        }));
 
-                Intent intent = new Intent(MainActivity.this, RecipeCategoryActivity.class);
-                intent.putExtra("recipeCategory",data.getItemName());
-                startActivity(intent);
+        RecyclerView dishTypeRecycler = findViewById(R.id.recycler_view_dish_type);
+        dishTypeRecycler.setAdapter(new CuisineAdapter(getDataList(), this, new CuisineAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(View v, MainMenuItem data) {
+
             }
         }));
     }
@@ -62,8 +65,4 @@ public class MainActivity extends AppCompatActivity {
         return mainMenuList;
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
 }
