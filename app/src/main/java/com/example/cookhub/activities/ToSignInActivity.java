@@ -83,7 +83,7 @@ public class ToSignInActivity extends BaseActivity {
                             if (task.isSuccessful()) {
                                 Log.d("TAG", "signInWithEmail:success");
                                 Toast.makeText(ToSignInActivity.this, "Authentication successful", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(ToSignInActivity.this, SignedInActivity.class));
+                                startActivity(new Intent(ToSignInActivity.this, MainActivity.class));
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("TAG", "signInWithEmail:failure", task.getException());
