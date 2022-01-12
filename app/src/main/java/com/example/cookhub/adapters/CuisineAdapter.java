@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.cookhub.R;
 import com.example.cookhub.activities.SearchActivity;
 import com.example.cookhub.models.MainMenuItem;
+import com.example.cookhub.viewholders.CuisineHolder;
 
 import java.util.ArrayList;
 
