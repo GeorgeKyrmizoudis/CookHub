@@ -10,14 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cookhub">
         <activity
-            android:name=".bottom_navigation.AboutActivity"
+            android:name=".bottom_navigation_implementation.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".bottom_navigation.DashBoardActivity"
+            android:name=".bottom_navigation_implementation.FavoritesActivity"
             android:exported="false" />
         <activity
-            android:name=".bottom_navigation.BottomNavigationActivity"
+            android:name=".bottom_navigation_implementation.SearchActivity"
             android:exported="false" />
+        <activity
+            android:name=".bottom_navigation_test.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bottom_navigation_test.DashBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bottom_navigation_test.BottomNavigationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".user_profile.UserProfileActivity"
             android:exported="false" />
@@ -44,13 +59,7 @@
         <activity
             android:name=".activities.ToSignInActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SignedInActivity"
             android:exported="true" />

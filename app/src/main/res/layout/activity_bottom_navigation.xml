@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bottom_navigation.BottomNavigationActivity">
+    tools:context=".bottom_navigation_test.BottomNavigationActivity">
 
     <TextView
         android:id="@+id/bottom_navig_text"

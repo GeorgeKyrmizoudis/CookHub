@@ -1,4 +1,4 @@
-package com.example.cookhub.bottom_navigation;
+package com.example.cookhub.bottom_navigation_test;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,10 +29,12 @@ public class DashBoardActivity extends AppCompatActivity {
                     case R.id.dashboard:
                     return true;
                     case R.id.home:
+                        finish();
                         startActivity(new Intent(getApplicationContext(), BottomNavigationActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.about:
+                        finish();
                         startActivity(new Intent(getApplicationContext(), AboutActivity.class));
                         overridePendingTransition(0,0);
                         return true;
