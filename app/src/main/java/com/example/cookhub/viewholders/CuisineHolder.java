@@ -34,4 +34,4 @@ public class CuisineHolder extends RecyclerView.ViewHolder{
             }
         });
     }
-}}
+}
