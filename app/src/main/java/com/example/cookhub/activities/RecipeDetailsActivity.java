@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -23,6 +24,7 @@ import java.util.List;
 
 public class RecipeDetailsActivity extends BaseActivity {
 
+    String check;
     @Override
     public int getLayoutId() {
         return R.layout.recipe_details;
@@ -53,7 +55,7 @@ public class RecipeDetailsActivity extends BaseActivity {
 
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Please consider checking out Cookhub, our wonderful recipe app! Soon on PlayStore! https://www.youtube.com/c/GreekParanoia");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Check this out!!! "+check);
                 sendIntent.setType("text/plain");
 
                 Intent shareIntent = Intent.createChooser(sendIntent, null);
@@ -84,8 +86,9 @@ public class RecipeDetailsActivity extends BaseActivity {
         Recipe recipe_data = getIntent().getExtras().getParcelable("recipe");
 
         RecyclerView recyclerView = findViewById(R.id.recipe_ingredients_list);
-        recyclerView.setAdapter(new RecipeDetailsAdapter(getDataList(), this));
+        recyclerView.setAdapter(new RecipeDetailsAdapter(recipe_data.ingredientLines, this));
 
+        check=recipe_data.url;
 
         ImageView imageView = findViewById(R.id.recipe_img);
         /*Log.d("IMAGE", "bind: "+ );*/
@@ -99,18 +102,14 @@ public class RecipeDetailsActivity extends BaseActivity {
             public void onError() {
             }
         });
+        TextView recipe_txt = findViewById(R.id.recipe_name);
+        recipe_txt.setText(recipe_data.label);
+
+        TextView nutrinfo = findViewById(R.id.recipe_nutrition_info);
+        nutrinfo.setText("Nutrition Information:\n" + recipe_data.calories + " Calories\n\n" + "Cautions: " + recipe_data.cautions);
+
+        TextView recipe_instr = findViewById(R.id.recipe_instructions);
+        recipe_instr.setText("For instructions go to: " + recipe_data.url);
     }
 
-    private List<String> getDataList(){
-        String[] ingredients = {"2 tbsp. extra-virgin olive oil","4 (6-oz.) filet mignon","Kosher salt","Freshly ground black pepper","4 tbsp. butter","1 tbsp. roughly chopped rosemary"};
-        List<String> list = Arrays.asList(ingredients);
-        return list;
-    }
-  /*  private ArrayList<Recipe> getRecipesList() {
-        ArrayList<Recipe> recipesList = new ArrayList<Recipe>();
-        for (Hit hit : jsonResponse.getHits()) {
-            recipesList.add(hit.getRecipe());
-        }
-        return recipesList;
-    }*/
 }
