@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/search_view"
-        android:text="Search"
+        android:text="@string/search"
         android:textColor="@color/orange"
         android:padding="12dp"
         android:textSize="20dp"
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/recycler_view_cuisines"
-        android:text="Cuisines"/>
+        android:text="@string/cuisines"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_cuisines"
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/recycler_view_dish_type"
-        android:text="Dish Type"/>
+        android:text="@string/meal_type"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_dish_type"
         android:layout_width="match_parent"
