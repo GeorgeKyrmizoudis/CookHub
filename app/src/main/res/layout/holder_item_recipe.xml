@@ -69,17 +69,21 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.9"/>
 
-        <ImageView
+        <ToggleButton
             android:id="@+id/btn_favorite"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_margin="12dp"
-            android:src="@drawable/ic_baseline_favorite_24"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:backgroundTint="@color/orange"
+            android:background="@drawable/like_btn_action"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toRightOf="@id/buttons_guideline"
-            app:layout_constraintBottom_toTopOf="@+id/btn_share"
-            app:tint="@color/dark_orange"
-            tools:layout_editor_absoluteY="1dp" />
+            app:layout_constraintBottom_toTopOf="@+id/btn_share"/>
+
 
         <ImageView
             android:id="@+id/btn_share"

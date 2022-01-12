@@ -1,7 +1,9 @@
 package com.example.cookhub.viewholders;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,6 +50,21 @@ public class RecipeCategoryHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 listener.onClick(v, data);
+            }
+        });
+
+        ImageView buttonShare = itemView.findViewById(R.id.btn_share);
+        buttonShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Check this out!!! "+ data.getUrl());
+                sendIntent.setType("text/plain");
+
+                Intent shareIntent = Intent.createChooser(sendIntent, null);
+                v.getContext().startActivity(shareIntent);
             }
         });
     }
