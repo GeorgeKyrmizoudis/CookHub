@@ -95,7 +95,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Please consider checking out Cookhub, our wonderful recipe app! Soon on PlayStore! https://www.youtube.com/c/GreekParanoia");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Please consider checking out Cookhub, our wonderful recipe app! Soon on PlayStore!");
                 sendIntent.setType("text/plain");
 
                 Intent shareIntent = Intent.createChooser(sendIntent, null);
